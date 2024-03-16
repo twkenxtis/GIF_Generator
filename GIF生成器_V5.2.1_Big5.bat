@@ -34,16 +34,16 @@
 cls
 @echo off
 setlocal enabledelayedexpansion
-rem debug ¶}Ãö
+rem debug é–‹é—œ
 set "debug=false" & rem true or false
-rem ª©¥»¸¹GIFV5_2
+rem ç‰ˆæœ¬è™ŸGIFV5_2
 
-rem ¥N½X¿ò¯d
+rem ä»£ç¢¼éºç•™
 del /Q .\program\window_count.txt 2>nul
 
 set "file_list=GIF_generatoring_DONT-DEL.mp4 123_tempfile.mp4 finalgif_DONT-DEL.gif .\program\frame*.png .\program\finalgi*.gif .\program\testfram*.jpg GIF_testing_DONT-DEL.mp4"
 set "lockFile=.\program\lockfile.lck"
-rem ²M³æfalse=µL²§±`
+rem æ¸…å–®false=ç„¡ç•°å¸¸
 set "any_file_exists=false"
     for %%i in (%file_list%) do (
         if exist "%%i" ( set "any_file_exists=true" )
@@ -51,79 +51,79 @@ set "any_file_exists=false"
     if !any_file_exists! == true (
         if exist !lockFile! (
             cls
-                echo ÀË´ú¨ì¦h­«µøµ¡¡I
-                echo ¸Ó¸}¥»ªº¥t¤@­Ó¹ê¨Ò¤w¦b¹B¦æ¡C
-                echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-                echo ­Y¤w½T»{¥u¶}±Ò¤@­Óµøµ¡¡A½Ğ«ö 'e' ¤w¸õ¹L¦¹¿ù»~...
+                echo æª¢æ¸¬åˆ°å¤šé‡è¦–çª—ï¼
+                echo è©²è…³æœ¬çš„å¦ä¸€å€‹å¯¦ä¾‹å·²åœ¨é‹è¡Œã€‚
+                echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                echo è‹¥å·²ç¢ºèªåªé–‹å•Ÿä¸€å€‹è¦–çª—ï¼Œè«‹æŒ‰ 'e' å·²è·³éæ­¤éŒ¯èª¤...
                     choice /c pe /n /t 30 /d p
                     set "MultiwindowsChoice=!errorlevel!"
                     if !MultiwindowsChoice! == 1 (
                         cls
-                        echo §A¿ï¾Ü¹w³]­ÈP 'p' > nul
-                        rem Â÷¶}µ{¦¡
+                        echo ä½ é¸æ“‡é è¨­å€¼P 'p' > nul
+                        rem é›¢é–‹ç¨‹å¼
                         goto :eof 
                     ) else if !MultiwindowsChoice! == 2 (
                         endlocal
                             setlocal enabledelayedexpansion
                             cls
-                            echo §A½T©w­n¸õ¹L³o­Ó¿ù»~¶Ü¡H
-                            echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+                            echo ä½ ç¢ºå®šè¦è·³éé€™å€‹éŒ¯èª¤å—ï¼Ÿ
+                            echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                                 timeout /nobreak /t 1 > nul
-                            echo «ö 'e' ½T©w¸õ¹L³o­Ó¿ù»~¡C
-                            echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+                            echo æŒ‰ 'e' ç¢ºå®šè·³éé€™å€‹éŒ¯èª¤ã€‚
+                            echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                                 choice /c pe /n /t 10 /d p
-                                rem ¸õ¹Lªì©l²§±`ÀË´ú
+                                rem è·³éåˆå§‹ç•°å¸¸æª¢æ¸¬
                                 set "MultiwindowsChoice=!errorlevel!"
                                     if !MultiwindowsChoice! == 1 (
                                         cls
-                                        echo §A¿ï¾Ü¹w³]­ÈP 'p' > nul
-                                            rem Â÷¶}µ{¦¡
+                                        echo ä½ é¸æ“‡é è¨­å€¼P 'p' > nul
+                                            rem é›¢é–‹ç¨‹å¼
                                             goto :eof 
                                             ) else if !MultiwindowsChoice! == 2 (
                                                 cls
-                                                echo §A¿ï¾Ü 'e' ½T©w¸õ¹L³o­Ó¿ù»~ > nul
+                                                echo ä½ é¸æ“‡ 'e' ç¢ºå®šè·³éé€™å€‹éŒ¯èª¤ > nul
                                                     del /Q !lockFile! 2>nul
-                                                        rem ¸õ¹Lªì©l²§±`ÀË´ú
+                                                        rem è·³éåˆå§‹ç•°å¸¸æª¢æ¸¬
                                                         goto :source
                                             )
                         )
     )
     del /Q .\program\finalgi*.gif 2>nul
-    del /Q GIF_generatoring_DONT-DEL.mp4 2>nul & rem §R°£¼v¤ù­ì©lÀÉ
+    del /Q GIF_generatoring_DONT-DEL.mp4 2>nul & rem åˆªé™¤å½±ç‰‡åŸå§‹æª”
     del /Q finalgi*.gif 2>nul 
     del /Q 123_tempfile.mp4 2>nul 
     del /Q .\program\testfram*.jpg 2>nul
     del /Q GIF_testing_DONT-DEL.mp4 2>nul
-        rem ½T»{ .\program¸ê®Æ§¨¬O§_ÁÙ¦³frame*.png
+        rem ç¢ºèª .\programè³‡æ–™å¤¾æ˜¯å¦é‚„æœ‰frame*.png
         :delprogramanypng
             if exist ".\program\frame*.png" ( 
-                rem ¬Û¹ï¸ô®|¸õ¨ì.\program,Del§¹¦Û°Êpopd¦^¨ì pushd ¸õ¤§«eªº¸ô®|
+                rem ç›¸å°è·¯å¾‘è·³åˆ°.\program,Delå®Œè‡ªå‹•popdå›åˆ° pushd è·³ä¹‹å‰çš„è·¯å¾‘
                 pushd .\program & del /Q frame*.png 2>nul & popd
                     ping 127.0.0.1 -n 1 -w 20 > nul
         goto :delprogramanypng
         )
             cls
-            echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-            echo ½Ğµy«á¡D¥¿¦bªì©l¤Æ... ªì©l¤Æ¥¢±Ñ¡I
-            echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-            echo ½ĞÃö³¬µøµ¡¡A­«·s¶}±Ò¥»µ{¦¡¡C
-            echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+            echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            echo è«‹ç¨å¾Œï¼æ­£åœ¨åˆå§‹åŒ–... åˆå§‹åŒ–å¤±æ•—ï¼
+            echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+            echo è«‹é—œé–‰è¦–çª—ï¼Œé‡æ–°é–‹å•Ÿæœ¬ç¨‹å¼ã€‚
+            echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 timeout /nobreak /nobreak /t 1 2>nul
-            echo ¥i¯à©ó¤W¦¸¹B§@®É¥¼¥¿½TÃö³¬µ{¦¡¡A©Î»~§R°£¥Í¦¨¤¤ªºÀÉ®×¡C
-            echo ¤T¬í«á¦Û°Ê°h¥X...
+            echo å¯èƒ½æ–¼ä¸Šæ¬¡é‹ä½œæ™‚æœªæ­£ç¢ºé—œé–‰ç¨‹å¼ï¼Œæˆ–èª¤åˆªé™¤ç”Ÿæˆä¸­çš„æª”æ¡ˆã€‚
+            echo ä¸‰ç§’å¾Œè‡ªå‹•é€€å‡º...
                 timeout /nobreak /t 3 > nul 
                     exit
     )
 
-rem ----²§±`§PÂ_©M¦h­«µøµ¡§PÂ_¡A²§±`ÀË´úµ²§ô----
+rem ----ç•°å¸¸åˆ¤æ–·å’Œå¤šé‡è¦–çª—åˆ¤æ–·ï¼Œç•°å¸¸æª¢æ¸¬çµæŸ----
 :source
 setlocal enabledelayedexpansion
-rem ¹w³]¤£¨«Multi³q¹D false
+rem é è¨­ä¸èµ°Multié€šé“ false
 set "Multigenfuncation_start=false"
-rem ²MªÅ!(del) ¼g¤J¥¢±Ñ¼v¤ùªºªºÀÉ¦W ¥Î©ó!lastfailname!
+rem æ¸…ç©º!(del) å¯«å…¥å¤±æ•—å½±ç‰‡çš„çš„æª”å ç”¨æ–¼!lastfailname!
 del /Q .\program\lastfailname.txt
 
-rem ----ªì©l¤Æµ²§ô ----
+rem ----åˆå§‹åŒ–çµæŸ ----
 
 :checkMP4
 rem defines the lock file name
@@ -133,41 +133,41 @@ set "originalFilename="
 set "mp4Count=0"
 set "ffmpegPath=.\program\ffmpeg" & set "ffprobePath=.\program\ffprobe"
 set "videoFile=GIF_generatoring_DONT-DEL.mp4" 
-rem GIFSKI Variable ÅÜ¼Æ
+rem GIFSKI Variable è®Šæ•¸
 set "quality=100" & set "motionQuality=90" & set "lossyQuality=75"
-rem Âk0 regenGIF'ÅÜ¼Æ
+rem æ­¸0 regenGIF'è®Šæ•¸
 set "regenGIF_Count=0"
-rem Âk0 oneDeplicatname
+rem æ­¸0 oneDeplicatname
 set "oneDeplicatname="
-rem Âk0 oneDeplicatname
+rem æ­¸0 oneDeplicatname
 set "Orgfilename="
-rem Âk0 userChoice
+rem æ­¸0 userChoice
 set "originalFilename[%userChoice%]="
-rem Âk0 suffixr
+rem æ­¸0 suffixr
 set "suffixr="
-rem Âk0 GIFsearchname
+rem æ­¸0 GIFsearchname
 set "GIFsearchname="
-rem Âk0 failcount
+rem æ­¸0 failcount
 set /a "failcount=0"
 rem ----------------------
         if !debug! == true (
         cls
         echo First :checkmp4 funcation debug!
-        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         echo mp4Count: !mp4Count!
         echo Multigenfuncation_start !Multigenfuncation_start!
         pause
         )
 
-    rem Åª¨ú³Ì«á¤@¦¸¥Í¦¨ªºÀÉ®×
+    rem è®€å–æœ€å¾Œä¸€æ¬¡ç”Ÿæˆçš„æª”æ¡ˆ
     set /p "templastgen=" < .\program\originalFilename[1].txt
     set "lastgen=!templastgen:~0,-1!" & rem !variable:~start,length!
-    echo Åª¨úªº­ì©lÀÉ:¡@"!templastgen!" > nul
-    echo §R°£¦r²Å¦êªº³Ì«á¤@­Ó¦r¤¸:¡@"!lastgen!" > nul
+    echo è®€å–çš„åŸå§‹æª”:ã€€"!templastgen!" > nul
+    echo åˆªé™¤å­—ç¬¦ä¸²çš„æœ€å¾Œä¸€å€‹å­—å…ƒ:ã€€"!lastgen!" > nul
 
-rem :Cycledetection ¦Ü¦h30S !Cycledetection_count!
+rem :Cycledetection è‡³å¤š30S !Cycledetection_count!
 set "Cycledetection_count=1"
-rem ¶] 1 video or Multi video funcation using !mp4count!
+rem è·‘ 1 video or Multi video funcation using !mp4count!
 :Cycledetection
         if !mp4Count! == 0 (
             for %%F in (*.mp4) do (
@@ -175,19 +175,19 @@ rem ¶] 1 video or Multi video funcation using !mp4count!
                 set "originalFilename[!mp4Count!]=%%~nF"
                 )
                 cls
-                echo ½Ğ±N¼v¤ùÀÉ®×©ì°Ê¨ì»P¦¹¦@¦Pªº¸ê®Æ§¨¤º¡C
-                echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-                echo ³Ì«á¤@¦¸¥Í¦¨ªºGIF¡G^|!lastgen!.gif^|
-                echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-                echo ¨C¬íÀË´ú¤¤.... 
-            rem ¨C¬íÀË´ú¤@¦¸
+                echo è«‹å°‡å½±ç‰‡æª”æ¡ˆæ‹–å‹•åˆ°èˆ‡æ­¤å…±åŒçš„è³‡æ–™å¤¾å…§ã€‚
+                echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                echo æœ€å¾Œä¸€æ¬¡ç”Ÿæˆçš„GIFï¼š^|!lastgen!.gif^|
+                echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                echo æ¯ç§’æª¢æ¸¬ä¸­.... 
+            rem æ¯ç§’æª¢æ¸¬ä¸€æ¬¡
             timeout /nobreak /t 1 > nul
                 if !Cycledetection_count! == 3 (
                     cls
-                        echo 3 ¬í¤ºµL¼v¤ù¡Aµ{¦¡§Y±NÂ÷¶}...
-                        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-                        echo ¦p»İªğ¦^ GIF ¥Í¦¨ ¡A½Ğ«ö 'e'
-                        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+                        echo 3 ç§’å…§ç„¡å½±ç‰‡ï¼Œç¨‹å¼å³å°‡é›¢é–‹...
+                        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                        echo å¦‚éœ€è¿”å› GIF ç”Ÿæˆ ï¼Œè«‹æŒ‰ 'e'
+                        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                         choice /c pe /n /t 5 /d p
                         if errorlevel 2 (
                             set "Cycledetection_count=1"
@@ -197,53 +197,53 @@ rem ¶] 1 video or Multi video funcation using !mp4count!
                             goto :eof
                         )
                 )
-            rem :Cycledetection ´`ÀôÀË´úfuncation
+            rem :Cycledetection å¾ªç’°æª¢æ¸¬funcation
             set /a "Cycledetection_count+=1"
                             goto :Cycledetection
 ) else if !mp4Count! == 1 (
     set "Cycledetection_count=1"
         set "userChoice=1"
         cls
-        echo ³o¬O³æ¼v¤ù°j°é > nul
-        echo ¿ï¾Ü¤@³¡¼v¤ù "!originalFilename[1]!.mp4"
-        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+        echo é€™æ˜¯å–®å½±ç‰‡è¿´åœˆ > nul
+        echo é¸æ“‡ä¸€éƒ¨å½±ç‰‡ "!originalFilename[1]!.mp4"
+        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             if !debug! == true ( pause )
                         goto :GIF
 ) else (
     set "Cycledetection_count=1"
-        rem ½T©w¶] multivideoList Âktrue
+        rem ç¢ºå®šè·‘ multivideoList æ­¸true
         set "Multigenfuncation_start=true"
                     goto :Multigenfuncation
 )
 
 :Multigenfuncation
     if !mp4Count! == 1 (
-        rem ²MªÅ!(del) ¼g¤J¥¢±Ñ¼v¤ùªºªºÀÉ¦W ¥Î©ó!lastfailname!
+        rem æ¸…ç©º!(del) å¯«å…¥å¤±æ•—å½±ç‰‡çš„çš„æª”å ç”¨æ–¼!lastfailname!
         del /Q .\program\lastfailname.txt
      )
 
         if !debug! == true (
         cls
-        echo Multigenfuncation ³Q±Ò°Ê!
+        echo Multigenfuncation è¢«å•Ÿå‹•!
         echo Multigenfuncation_start: !Multigenfuncation_start!
         echo originalFilename: !originalFilename!
         pause
         )
 
 set "mp4Count=0"
-    REM ¹M¾ú©Ò¦³.mp4¤å¥ó¡A­pºâ¤å¥ó¼Æ¶q¨Ã¦sÀx­ì©l¤å¥ó¦W
+    REM éæ­·æ‰€æœ‰.mp4æ–‡ä»¶ï¼Œè¨ˆç®—æ–‡ä»¶æ•¸é‡ä¸¦å­˜å„²åŸå§‹æ–‡ä»¶å
     for %%F in (*.mp4) do (
         set /A mp4Count+=1
         set "originalFilename[!mp4Count!]=%%~nF"
     )
-    REM Åã¥Ü©Ò¦³.mp4¤å¥óªº¦Cªí
+    REM é¡¯ç¤ºæ‰€æœ‰.mp4æ–‡ä»¶çš„åˆ—è¡¨
         cls
-        echo ÀË´ú¨ì¦h³¡¼v¤ù¡A±Ò°Ê´`Àô¥Í¦¨...
-        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+        echo æª¢æ¸¬åˆ°å¤šéƒ¨å½±ç‰‡ï¼Œå•Ÿå‹•å¾ªç’°ç”Ÿæˆ...
+        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         for /l %%i in (1, 1, !mp4Count!) do ( 
-            echo File¡G %%i !originalFilename[%%i]!
+            echo Fileï¼š %%i !originalFilename[%%i]!
         )
-        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
  
             rem this is a Multi's debug
             if %debug% == true (
@@ -253,18 +253,18 @@ set "mp4Count=0"
             timeout /T 2
             )
 
-        REM ¹w³]userchoice '1' ¸õ¹LÀÉ®×´N§ïÅÜ 'ÅÜ¼Æ'
+        REM é è¨­userchoice '1' è·³éæª”æ¡ˆå°±æ”¹è®Š 'è®Šæ•¸'
         set /a "userChoice=1"
 
             :failGIF
             if !originalFilename[%userChoice%]! == !lastfailname! ( 
                 for /l %%i in (1, 1, !mp4Count!) do ( 
-                    echo File¡G %%i !originalFilename[%%i]! > nul
+                    echo Fileï¼š %%i !originalFilename[%%i]! > nul
                 )
                 set /a "userChoice+=1"
                     if !userChoice! gtr !mp4Count! (
                         set "userChoice=1"
-                            rem ²MªÅ!(del) ¼g¤J¥¢±Ñ¼v¤ùªºªºÀÉ¦W ¥Î©ó!lastfailname!
+                            rem æ¸…ç©º!(del) å¯«å…¥å¤±æ•—å½±ç‰‡çš„çš„æª”å ç”¨æ–¼!lastfailname!
                             del /Q .\program\lastfailname.txt
                                 goto :GIF
                     )
@@ -272,25 +272,25 @@ set "mp4Count=0"
 rem continue :GIF funcation
 
 :GIF
-rem ÀË¬dÀÉ¦W¬O§_ '!' '^'
-rem ¹Á¸Õ©î¸Ñ¤@±i .jpg to .\program\testfram_DONT-DEL.jpg ´ú¸ÕÀÉ¦W.
+rem æª¢æŸ¥æª”åæ˜¯å¦ '!' '^'
+rem å˜—è©¦æ‹†è§£ä¸€å¼µ .jpg to .\program\testfram_DONT-DEL.jpg æ¸¬è©¦æª”å.
 ren "!originalFilename[%userChoice%]!.mp4" "GIF_testing_DONT-DEL.mp4"
     for %%a in (GIF_testing_DONT-DEL.mp4) do ( %ffmpegPath% -i GIF_testing_DONT-DEL.mp4 -vf "fps=1" -vframes 1 .\program\testfram_DONT-DEL.jpg 2>nul )
         if exist ".\program\testfram_DONT-DEL.jpg" (
-            echo ¤å¥ó¦s¦b¡Aªğ¦^ true >nul
+            echo æ–‡ä»¶å­˜åœ¨ï¼Œè¿”å› true >nul
                 del /Q .\program\testfram_DONT-DEL.jpg
                     ren "GIF_testing_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
             ) else (
                 del /Q "!lockFile!" >nul
                 del /Q finalgi*.gif > nul 
                 del /Q .\program\finalgi*.gif > nul 
-                echo °õ¦æ°h¥Xµ{¦¡¤¤... ½Ğ¤Å¦b¦¹´Á¶¡Ãö³¬µøµ¡¡I
-                echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+                echo åŸ·è¡Œé€€å‡ºç¨‹å¼ä¸­... è«‹å‹¿åœ¨æ­¤æœŸé–“é—œé–‰è¦–çª—ï¼
+                echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 if exist ".\program\frame*.png" ( 
-                    rem ½T»{ .\program¸ê®Æ§¨¬O§_ÁÙ¦³frame*.png
+                    rem ç¢ºèª .\programè³‡æ–™å¤¾æ˜¯å¦é‚„æœ‰frame*.png
                     :delprogramany.png_2
                         if exist ".\program\frame*.png" ( 
-                            rem ¬Û¹ï¸ô®|¸õ¨ì.\program,Del§¹¦Û°Êpopd¦^¨ì pushd ¸õ¤§«eªº¸ô®|
+                            rem ç›¸å°è·¯å¾‘è·³åˆ°.\program,Delå®Œè‡ªå‹•popdå›åˆ° pushd è·³ä¹‹å‰çš„è·¯å¾‘
                             pushd .\program & del /Q frame*.png 2>nul & popd
                                 ping 127.0.0.1 -n 1 -w 20 > nul
                                         goto :delprogramany.png_2
@@ -298,25 +298,25 @@ ren "!originalFilename[%userChoice%]!.mp4" "GIF_testing_DONT-DEL.mp4"
     )
 
 ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
-rem ¶]«Dªk¦r¤¸ !Multigenfuncation_start! Âk false
+rem è·‘éæ³•å­—å…ƒ !Multigenfuncation_start! æ­¸ false
 set "Multigenfuncation_start=false"
     cls
-    echo ÀË´ú¨ìÀÉ¦W§t¦³ '¡s' ©Î '?' µ¥«Dªk¦r¤¸¡C
-    echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-    echo ½Ğ§ó§ïÀÉ¦W«á­«¸Õ¡I¤T¬í¬í«á¦Û°Ê°h¥X...
+    echo æª¢æ¸¬åˆ°æª”åå«æœ‰ 'ï¸¿' æˆ– '?' ç­‰éæ³•å­—å…ƒã€‚
+    echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    echo è«‹æ›´æ”¹æª”åå¾Œé‡è©¦ï¼ä¸‰ç§’ç§’å¾Œè‡ªå‹•é€€å‡º...
         timeout /nobreak /t 3 > nul
                 goto :eof
 )
 
 cls
-echo °õ¦æ¤¤ ¿ï¾ÜªºÀÉ®×: !originalFilename[%userChoice%]!.mp4 ^(³o¥i¯à­nµ¥«İ«Üªøªº®É¶¡....^)
-echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-echo ¥¿¦b±N©î¸Ñ¦¨¨Ó¥Í¦¨GIF...
-echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+echo åŸ·è¡Œä¸­ é¸æ“‡çš„æª”æ¡ˆ: !originalFilename[%userChoice%]!.mp4 ^(é€™å¯èƒ½è¦ç­‰å¾…å¾ˆé•·çš„æ™‚é–“....^)
+echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+echo æ­£åœ¨å°‡æ‹†è§£æˆä¾†ç”ŸæˆGIF...
+echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 if !debug! == true ( echo ^|!originalFilename[%userChoice%]!^| & pause )
 
-rem ÀË¬d¸ê®Æ§¨¦³µL¬Û¦PÀÉ¦WªºGIF
+rem æª¢æŸ¥è³‡æ–™å¤¾æœ‰ç„¡ç›¸åŒæª”åçš„GIF
 rem check_if_GIF_alreadyexit 
 for %%i in (*.mp4) do ( set "!originalFilename[%userChoice%]!=%%~ni")
 rem checks if there is any GIF file named !originalFilename[%userChoice%]!
@@ -324,39 +324,39 @@ dir /b | find /i "!originalFilename[%userChoice%]!.gif" > nul
 rem determines the execution result of the above command, if it exists, output a prompt, otherwise output "false"
 if errorlevel 1 (
     rem determines the execution result of the above command, if it exists, output a prompt, otherwise output "false"
-        if !debug! == true ( echo ¨SÀË´ú¨ìÀÉ¦W¬Û¦PªºGIF¡AÄ~Äò¥Í¦¨
+        if !debug! == true ( echo æ²’æª¢æ¸¬åˆ°æª”åç›¸åŒçš„GIFï¼Œç¹¼çºŒç”Ÿæˆ
                             pause )
-            rem §ï¦W¦r¤w§Q¶}©l¥Í¦¨
+            rem æ”¹åå­—å·²åˆ©é–‹å§‹ç”Ÿæˆ
             ren "!originalFilename[%userChoice%]!.mp4" "GIF_generatoring_DONT-DEL.mp4"
                             goto :startGIFgenerator
 ) else (
         cls
-        echo ÀË´ú¨ì¬Û¦PÀÉ¦WªºGIF!
+        echo æª¢æ¸¬åˆ°ç›¸åŒæª”åçš„GIF!
             :checkGIF_generatoring_DONT-DEL.mp4_Status
                 if exist GIF_generatoring_DONT-DEL.mp4 (
-                    REM ÀË´ú¨ì¦³GIF¥Í¦¨¤¤¡A½Ğµyµ¥...
+                    REM æª¢æ¸¬åˆ°æœ‰GIFç”Ÿæˆä¸­ï¼Œè«‹ç¨ç­‰...
                     ping 127.0.0.1 -n 1 -w 50 >nul
                 goto :checkGIF_generatoring_DONT-DEL.mp4_Status
             )
             set "Orgfilename=!originalFilename[%userChoice%]!.mp4"
-            set "searchname=!originalFilename[%userChoice%]! - ­«½Æ¥Í¦¨ (1).gif"
+            set "searchname=!originalFilename[%userChoice%]! - é‡è¤‡ç”Ÿæˆ (1).gif"
                 if exist "!searchname!" (
                     cls
-                    echo §ä¨ìÀÉ¦W¥]§t" - ­«½Æ¥Í¦¨ (1)"ÀÉ®×
+                    echo æ‰¾åˆ°æª”ååŒ…å«" - é‡è¤‡ç”Ÿæˆ (1)"æª”æ¡ˆ
 
                         if !debug! == true (
                                 cls
-                                echo §ä¨ìÀÉ¦W¥]§t" - ­«½Æ¥Í¦¨ (1)"ÀÉ®×
+                                echo æ‰¾åˆ°æª”ååŒ…å«" - é‡è¤‡ç”Ÿæˆ (1)"æª”æ¡ˆ
                                 echo ----------------------------------------------
-                                echo ÀÉ¦W¤w¸g¦³_­«·s©R¦W^(number^)¡A±NÀË´ú¼Æ¦r¨Ã"»¼¼W"
+                                echo æª”åå·²ç¶“æœ‰_é‡æ–°å‘½å^(number^)ï¼Œå°‡æª¢æ¸¬æ•¸å­—ä¸¦"éå¢"
                                 pause )
                             
                     set "Multinamesearch="
                     set "tempsuffixr="
                     for %%F in ( *.gif ) do (
                     set "tempMultinamesearch=%%~nF"
-                        rem ¤p¦W - ­«½Æ¥Í¦¨ (1).gif
-                        for /f "tokens=2 delims=­«½Æ¥Í¦¨()" %%i in ( "!tempMultinamesearch!" ) do ( 
+                        rem å°å - é‡è¤‡ç”Ÿæˆ (1).gif
+                        for /f "tokens=2 delims=é‡è¤‡ç”Ÿæˆ()" %%i in ( "!tempMultinamesearch!" ) do ( 
                             set "firstnametempMultinamesearch=%%~nF"
                             echo !firstnametempMultinamesearch!
 
@@ -367,98 +367,98 @@ if errorlevel 1 (
                             ) 
                         )
                     )
-                    if !suffixr! == 100 ( cls & echo ¥Ø¼ĞGIF¹F¨ì100¦¸­«½Æ¥Í¦¨¦¸¼Æ¤W­­¡A«ö¥ô·NÁä°h¥X... & timeout /T 10 > nul & exit  )
+                    if !suffixr! == 100 ( cls & echo ç›®æ¨™GIFé”åˆ°100æ¬¡é‡è¤‡ç”Ÿæˆæ¬¡æ•¸ä¸Šé™ï¼ŒæŒ‰ä»»æ„éµé€€å‡º... & timeout /T 10 > nul & exit  )
 
                                     if !debug! == true (
                                     cls
-                                    echo suffixr is "!suffixr!"  & rem !suffix!= - ­«½Æ¥Í¦¨ (¸Ì­±ªº¼Æ¦r +1) debug
-                                    echo ¨Ï¥ÎªÌ¿ï¾ÜªºÀÉ®×.mp4: !Orgfilename! & pause ) 
+                                    echo suffixr is "!suffixr!"  & rem !suffix!= - é‡è¤‡ç”Ÿæˆ (è£¡é¢çš„æ•¸å­— +1) debug
+                                    echo ä½¿ç”¨è€…é¸æ“‡çš„æª”æ¡ˆ.mp4: !Orgfilename! & pause ) 
                                                                           
-                    rem ­«·s½á¤©ÀÉ¦W·s¦W¦r
-                    ren "!originalFilename[%userChoice%]!.mp4" "!originalFilename[%userChoice%]! - ­«½Æ¥Í¦¨ (!suffixr!).mp4"
-                    rem ·s¦W¦rÀÉ¦WÂkÁÙµ¹­ì©lÀÉ¦WÅÜ¼Æ
-                    set "Multiname= - ­«½Æ¥Í¦¨ (!suffixr!).mp4"
-                    set "originalFilename[%userChoice%]=!originalFilename[%userChoice%]! - ­«½Æ¥Í¦¨ (!suffixr!)"
+                    rem é‡æ–°è³¦äºˆæª”åæ–°åå­—
+                    ren "!originalFilename[%userChoice%]!.mp4" "!originalFilename[%userChoice%]! - é‡è¤‡ç”Ÿæˆ (!suffixr!).mp4"
+                    rem æ–°åå­—æª”åæ­¸é‚„çµ¦åŸå§‹æª”åè®Šæ•¸
+                    set "Multiname= - é‡è¤‡ç”Ÿæˆ (!suffixr!).mp4"
+                    set "originalFilename[%userChoice%]=!originalFilename[%userChoice%]! - é‡è¤‡ç”Ÿæˆ (!suffixr!)"
                                                                 
                         if !debug! == true ( cls
-                        echo ­ì©lÀÉ¦W: "!Orgfilename!" & rem ÅÜ¼Æ'¦³'.mp4 (ªÅ®æ³£¨S°İÃD)
-                        echo ³Ì²×ÀÉ¦W: "!originalFilename[%userChoice%]!" & rem 'µL'.mp4 (ªÅ®æ³£¨S°İÃD)
+                        echo åŸå§‹æª”å: "!Orgfilename!" & rem è®Šæ•¸'æœ‰'.mp4 (ç©ºæ ¼éƒ½æ²’å•é¡Œ)
+                        echo æœ€çµ‚æª”å: "!originalFilename[%userChoice%]!" & rem 'ç„¡'.mp4 (ç©ºæ ¼éƒ½æ²’å•é¡Œ)
                         pause )
                                                                     
-                    rem ³oÃä­«·s©R¦W "GIF_generatoring_DONT-DEL"¡A¶}©l¶]GIF¥Í¦¨ 
+                    rem é€™é‚Šé‡æ–°å‘½å "GIF_generatoring_DONT-DEL"ï¼Œé–‹å§‹è·‘GIFç”Ÿæˆ 
                     ren "!originalFilename[%userChoice%]!.mp4" "!videoFile!"
                     
                         if !debug! == true (
                             cls 
                             echo ---------------------------------------------------
-                            rem ³Ì²×½T»{ÀÉ¦WÅÜ¼Æ¦³µLÂkÁÙµ¹­ì©lÅÜ¼Æ¡A¨Ã¥B¡F¤£»İ­n±a'°ÆÀÉ¦W'
-                            echo ¤W¨BÆJ¤w¸g±N¸ê®Æ§¨¤ºÀÉ®×­«©R¦W¦¨ 'GIF_generatoring_DONT-DEL' ¶}©l¶]¥Í¦¨
+                            rem æœ€çµ‚ç¢ºèªæª”åè®Šæ•¸æœ‰ç„¡æ­¸é‚„çµ¦åŸå§‹è®Šæ•¸ï¼Œä¸¦ä¸”ï¼›ä¸éœ€è¦å¸¶'å‰¯æª”å'
+                            echo ä¸Šæ­¥é©Ÿå·²ç¶“å°‡è³‡æ–™å¤¾å…§æª”æ¡ˆé‡å‘½åæˆ 'GIF_generatoring_DONT-DEL' é–‹å§‹è·‘ç”Ÿæˆ
                             echo ---------------------------------------------------
-                            echo ¼v¤ùÀÉ¦W: ^|!originalFilename[%userChoice%]!^| & pause )
+                            echo å½±ç‰‡æª”å: ^|!originalFilename[%userChoice%]!^| & pause )
                     cls 
-                        echo ÀË´ú¨ì"!originalFilename[%userChoice%]!.gif"¡@¤w¸g¦s¦b¸ê®Æ§¨¤º¡C
-                        echo ¥¿¦b­«·s©R¦W¤wÄ~Äò....
-                        if !debug! == true ( cls & echo ½T»{¤w¸g§ï¦W¦¨ 'GIF_generatoring_DONT-DEL' & pause )
+                        echo æª¢æ¸¬åˆ°"!originalFilename[%userChoice%]!.gif"ã€€å·²ç¶“å­˜åœ¨è³‡æ–™å¤¾å…§ã€‚
+                        echo æ­£åœ¨é‡æ–°å‘½åå·²ç¹¼çºŒ....
+                        if !debug! == true ( cls & echo ç¢ºèªå·²ç¶“æ”¹åæˆ 'GIF_generatoring_DONT-DEL' & pause )
                                     goto :startGIFgenerator
 
                 ) else ( cls
-                    echo ¨S§ä¨ì¥]§t" - ­«½Æ¥Í¦¨ (1)"ÀÉ®×
-                            if !debug! == true ( cls & echo ¨S§ä¨ì¥]§t" - ­«½Æ¥Í¦¨ (1)"ÀÉ®× & pause )
-                    set "oneDeplicatname=!originalFilename[%userChoice%]! - ­«½Æ¥Í¦¨ (1)"
+                    echo æ²’æ‰¾åˆ°åŒ…å«" - é‡è¤‡ç”Ÿæˆ (1)"æª”æ¡ˆ
+                            if !debug! == true ( cls & echo æ²’æ‰¾åˆ°åŒ…å«" - é‡è¤‡ç”Ÿæˆ (1)"æª”æ¡ˆ & pause )
+                    set "oneDeplicatname=!originalFilename[%userChoice%]! - é‡è¤‡ç”Ÿæˆ (1)"
                     ren "!Orgfilename!" "!oneDeplicatname!"
-                    rem ·s¦W¦rÀÉ¦WÂkÁÙµ¹­ì©lÀÉ¦WÅÜ¼Æ
+                    rem æ–°åå­—æª”åæ­¸é‚„çµ¦åŸå§‹æª”åè®Šæ•¸
                     set "originalFilename[%userChoice%]=!oneDeplicatname!"
 
                         if !debug! == true ( cls
-                        echo Orgfilename: "!Orgfilename!" & rem ÅÜ¼Æ'¦³'.mp4 (ªÅ®æ³£¨S°İÃD)
-                        echo originalFilename[%userChoice%]: "!originalFilename[%userChoice%]!" & rem 'µL'.mp4 (ªÅ®æ³£¨S°İÃD)
+                        echo Orgfilename: "!Orgfilename!" & rem è®Šæ•¸'æœ‰'.mp4 (ç©ºæ ¼éƒ½æ²’å•é¡Œ)
+                        echo originalFilename[%userChoice%]: "!originalFilename[%userChoice%]!" & rem 'ç„¡'.mp4 (ç©ºæ ¼éƒ½æ²’å•é¡Œ)
                         pause )
                                                 
-                    rem ³oÃä­«·s©R¦W "GIF_generatoring_DONT-DEL"¡A¶}©l¶]GIF¥Í¦¨ 
+                    rem é€™é‚Šé‡æ–°å‘½å "GIF_generatoring_DONT-DEL"ï¼Œé–‹å§‹è·‘GIFç”Ÿæˆ 
                     ren "!originalFilename[%userChoice%]!" "!videoFile!"
 
                     cls 
-                        echo ÀË´ú¨ì"!originalFilename[%userChoice%]!.gif"¡@¤w¸g¦s¦b¸ê®Æ§¨¤º¡C
-                        echo ¥¿¦b­«·s©R¦W¤wÄ~Äò....
+                        echo æª¢æ¸¬åˆ°"!originalFilename[%userChoice%]!.gif"ã€€å·²ç¶“å­˜åœ¨è³‡æ–™å¤¾å…§ã€‚
+                        echo æ­£åœ¨é‡æ–°å‘½åå·²ç¹¼çºŒ....
                                     goto :startGIFgenerator
                     )
 )
 
 :startGIFgenerator
-rem ¨Ï¥Î¸ê®Æ§¨¤º¬°ÀÉ¦W!videoFile!(GIF_generatoring_DONT-DEL.mp4)¨Ó¶i¦æ¹Ï¤ùffmpeg©î¸Ñ
+rem ä½¿ç”¨è³‡æ–™å¤¾å…§ç‚ºæª”å!videoFile!(GIF_generatoring_DONT-DEL.mp4)ä¾†é€²è¡Œåœ–ç‰‡ffmpegæ‹†è§£
 for %%i in ( GIF_generatoring_DONT-DEL.mp4 ) do ( %%~ni )
 REM before grnerator GIFSKI Cal vidoe fps using ffprobe
 for /f "tokens=1,*" %%a in ('%ffprobePath% -v error -select_streams v -show_entries stream^=r_frame_rate -of csv^=p^=0 "%videoFile%"') do ( set "fps=%%a %%b" ) 
-rem FPS ­pºâ
+rem FPS è¨ˆç®—
 set /a "fps=!fps! + 1" & set /a "fpsdone=!fps! / 4 + 2 "
 rem if video fps more than 24 fps ffmpeg to 24 fps
 if !fps! gtr 23 (
     cls
-    echo ÀË´ú¨ì¿ï¾ÜªºÀÉ®×: !originalFilename[%userChoice%]!.mp4 ¤j©ó 24 FPS¡A±Ò°ÊÂàÀÉ¡C 
-    echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-    echo ^(³o¥i¯à­nµ¥«İ«Üªøªº®É¶¡....^)
+    echo æª¢æ¸¬åˆ°é¸æ“‡çš„æª”æ¡ˆ: !originalFilename[%userChoice%]!.mp4 å¤§æ–¼ 24 FPSï¼Œå•Ÿå‹•è½‰æª”ã€‚ 
+    echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    echo ^(é€™å¯èƒ½è¦ç­‰å¾…å¾ˆé•·çš„æ™‚é–“....^)
     %ffmpegPath% -hide_banner -y -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=1,setpts=5.0*PTS" -vsync vfr -c:v libx265 -crf 51 -c:a copy 123_tempfile.mp4 2>nul
         del /Q 123_tempfile.mp4
     cls
-        echo !originalFilename[%userChoice%]!.mp4 ÂàÀÉ¦¨¥\¡A¥¿¦b±N¼v¤ùÂàÀÉ½Ğµy«á¡C 
-        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-        echo ^(³o¥i¯à­nµ¥«İ«Üªøªº®É¶¡....^)
+        echo !originalFilename[%userChoice%]!.mp4 è½‰æª”æˆåŠŸï¼Œæ­£åœ¨å°‡å½±ç‰‡è½‰æª”è«‹ç¨å¾Œã€‚ 
+        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        echo ^(é€™å¯èƒ½è¦ç­‰å¾…å¾ˆé•·çš„æ™‚é–“....^)
         %ffmpegPath% -hide_banner -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=!fpsdone!" -vsync vfr .\program\frame%%04d.png  2>nul
 ) else (
     cls
-    echo ¿ï¾ÜªºÀÉ®×: !originalFilename[%userChoice%]!.mp4 ¥¿¦bÂàÀÉ¡C 
-    echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-    echo ^(³o¥i¯à­nµ¥«İ«Üªøªº®É¶¡....^)
+    echo é¸æ“‡çš„æª”æ¡ˆ: !originalFilename[%userChoice%]!.mp4 æ­£åœ¨è½‰æª”ã€‚ 
+    echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    echo ^(é€™å¯èƒ½è¦ç­‰å¾…å¾ˆé•·çš„æ™‚é–“....^)
     %ffmpegPath% -hide_banner -y -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=1,setpts=5.0*PTS" -vsync vfr -c:v libx265 -c:a copy 123_tempfile.mp4  2>nul
         del /Q 123_tempfile.mp4
         %ffmpegPath% -hide_banner -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=!fpsdone!" -vsync vfr .\program\frame%%04d.png  2>nul
 )
 rem start the first GIF generator (gifski) (.\program\gifski)
 cls
-echo !originalFilename[%userChoice%]!.mp4 ¥¿¦b¥Í¦¨GIF... ½Ğ¤Å¦b¦¹´Á¶¡Ãö³¬µøµ¡¡I
-echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-echo ¹B§@´Á¶¡½Ğ¤Å§R°£¦ì©óªº¼È¦sÀÉ®×¡A¼È®É¥Í¦¨ªº¹Ï¤ù¼v¤ùµ¥¡C
-echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
+echo !originalFilename[%userChoice%]!.mp4 æ­£åœ¨ç”ŸæˆGIF... è«‹å‹¿åœ¨æ­¤æœŸé–“é—œé–‰è¦–çª—ï¼
+echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+echo é‹ä½œæœŸé–“è«‹å‹¿åˆªé™¤ä½æ–¼çš„æš«å­˜æª”æ¡ˆï¼Œæš«æ™‚ç”Ÿæˆçš„åœ–ç‰‡å½±ç‰‡ç­‰ã€‚
+echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 .\program\gifski --width 720 --fps %fpsdone% --quality 100 --motion-quality=100 --lossy-quality=75 -o .\program\finalgif_DONT-DEL.gif .\program\frame*.png 2>nul
     rem after gif create checking movement is successful or not
     call :movecheck
@@ -469,17 +469,17 @@ echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢
 set /a "regenGIF_Count+=1"
 rem starting compress gif size
 cls
-    echo ±Ò°ÊÀ£ÁY¡A²Ö­pÀ£ÁY!regenGIF_Count!¦¸¡A¤W­­¬°10¦¸ ^|^ !originalFilename[%userChoice%]!.gif ¥Ø«eÀ£ÁY¨ì %sizeInMB%.%decimal% MB 
-    echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-    echo ½Ğ¤Å¦b¦¹´Á¶¡Ãö³¬µøµ¡¡I
-    echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-    echo ¹B§@´Á¶¡½Ğ¤Å§R°£¦ì©óªº¼È¦sÀÉ®×¡A¼È®É¥Í¦¨ªº¹Ï¤ù¼v¤ùµ¥¡C
-    echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w   
+    echo å•Ÿå‹•å£“ç¸®ï¼Œç´¯è¨ˆå£“ç¸®!regenGIF_Count!æ¬¡ï¼Œä¸Šé™ç‚º10æ¬¡ ^|^ !originalFilename[%userChoice%]!.gif ç›®å‰å£“ç¸®åˆ° %sizeInMB%.%decimal% MB 
+    echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    echo è«‹å‹¿åœ¨æ­¤æœŸé–“é—œé–‰è¦–çª—ï¼
+    echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    echo é‹ä½œæœŸé–“è«‹å‹¿åˆªé™¤ä½æ–¼çš„æš«å­˜æª”æ¡ˆï¼Œæš«æ™‚ç”Ÿæˆçš„åœ–ç‰‡å½±ç‰‡ç­‰ã€‚
+    echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€   
 rem Second gifski generator
 .\program\gifski --width 720 --fps %fpsdone% --quality %quality% --motion-quality=%motionQuality% --lossy-quality=%lossyQuality% -o .\program\finalgif_DONT-DEL.gif .\program\frame*.png 2>nul
 
 :movecheck
-rem ¡Ô¨C¦¸GIF¥Í¦¨§¹³£­nÀË¬d¬O§_²¾°Ê¦¨¥\!
+rem âˆšæ¯æ¬¡GIFç”Ÿæˆå®Œéƒ½è¦æª¢æŸ¥æ˜¯å¦ç§»å‹•æˆåŠŸ!
 move .\program\finalgif_DONT-DEL.gif .\
 if exist finalgif_DONT-DEL.gif (
     echo 'finalgif_DONT-DEL.gif' moved. > nul
@@ -503,7 +503,7 @@ rem Cal finalgif_DONT-DEL.gif size
         )
         echo File Size: %fileSize% bytes > nul
         echo Size in MB: %sizeInMB%.%decimal% MB > nul
-            rem °Ï°ìÅÜ¼Æ & ¥ş°ìÅÜ¼Æ
+            rem å€åŸŸè®Šæ•¸ & å…¨åŸŸè®Šæ•¸
 
 rem check GIF size 10MBlimit
 rem checkfinalgif_status
@@ -512,50 +512,50 @@ if %fileSize% gtr 10485759 (
     set /a "lossyQuality-=5"
     set /a "motionQuality-=1"
     set /a "quality-=7"
-    REM Á×§KÅÜ¼ÆÂk0
+    REM é¿å…è®Šæ•¸æ­¸0
         if !lossyQuality! lss 10 set "lossyQuality=75" 
         if !motionQuality! lss 10 set "motionQuality=90"
         if !quality! lss 10 set "quality=100"
-    REM À£ÁY¦¸¼Æ½Õ¾ã compress count
+    REM å£“ç¸®æ¬¡æ•¸èª¿æ•´ compress count
     if !regenGIF_Count! gtr 9 ( goto :regenGIF_Count )
-        rem ­pºâregenGIF failcount
+        rem è¨ˆç®—regenGIF failcount
                 goto :regenGIF
 ) else (
-    rem À£ÁY¦¨¥\¶]final funcation
+    rem å£“ç¸®æˆåŠŸè·‘final funcation
     goto :final
         )
 
 :regenGIF_Count
-rem¡@À£ÁY¥¢±Ñ regen GIF fail funcation
+remã€€å£“ç¸®å¤±æ•— regen GIF fail funcation
 del /Q finalgi*.gif 2> nul
-rem §âÀÉ¦W GIF_generatoring_DONT-DEL.mp4 ÁÙ­ì¦¨­ì¨ÓªºÀÉ¦W¡Aª`·NÀÉ¦WªÅ®æªºÁÙ­ìª¬ªp¡I
+rem æŠŠæª”å GIF_generatoring_DONT-DEL.mp4 é‚„åŸæˆåŸä¾†çš„æª”åï¼Œæ³¨æ„æª”åç©ºæ ¼çš„é‚„åŸç‹€æ³ï¼
 ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
         if exist ".\program\frame*.png" ( pushd .\program & del /Q frame*.png 2> nul & popd )      
-            rem ¼g¤J¥¢±Ñ¼v¤ùªºªºÀÉ¦W ¥Î©ó!lastfailname!
+            rem å¯«å…¥å¤±æ•—å½±ç‰‡çš„çš„æª”å ç”¨æ–¼!lastfailname!
             echo !originalFilename[%userChoice%]! > .\program\lastfailname.txt
-            rem Åª¨ú¥¢±Ñ¼v¤ùªºªºÀÉ¦W ¥Î©ó!lastfailname!
+            rem è®€å–å¤±æ•—å½±ç‰‡çš„çš„æª”å ç”¨æ–¼!lastfailname!
             set /p "templastfail=" < .\program\lastfailname.txt
             set "lastfailname=!templastfail:~0,-1!" & rem !variable:~start,length!
-            echo Åª¨úªº­ì©lÀÉ:¡@"!templastfail!" > nul
-            echo §R°£¦r²Å¦êªº³Ì«á¤@­Ó¦r¤¸:¡@"!lastfailname!" > nul
-                rem ­pºâregenGIF failcount
+            echo è®€å–çš„åŸå§‹æª”:ã€€"!templastfail!" > nul
+            echo åˆªé™¤å­—ç¬¦ä¸²çš„æœ€å¾Œä¸€å€‹å­—å…ƒ:ã€€"!lastfailname!" > nul
+                rem è¨ˆç®—regenGIF failcount
                 set /a "failcount+=1"
                 if !Multigenfuncation_start! == true ( 
                     if !failcount! gtr 4 (
                     ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"    
                     cls
-                        echo  !originalFilename[%userChoice%]!.gif ¥Í¦¨¥¢±Ñ¡A¹F¨ìÀ£ÁY¦¸¼Æ¤W­­¡I
-                        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-                        echo  ­ì©l¼v¤ù !originalFilename[%userChoice%]!.mp4 ¤w«O¯d¥¼§R°£
-                        echo  ³Ì«á¤@¦¸À£ÁY¨ì:!sizeInMB!.!decimal!?
-                        echo  ½Ğ¹Á¸Õ´À´«¼v¤ùÀÉ®×¡A©ÎÁYµu¼v¤ùªø«×¡F§ïÅÜ¸ÑªR«×
-                        echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w 
+                        echo  !originalFilename[%userChoice%]!.gif ç”Ÿæˆå¤±æ•—ï¼Œé”åˆ°å£“ç¸®æ¬¡æ•¸ä¸Šé™ï¼
+                        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                        echo  åŸå§‹å½±ç‰‡ !originalFilename[%userChoice%]!.mp4 å·²ä¿ç•™æœªåˆªé™¤
+                        echo  æœ€å¾Œä¸€æ¬¡å£“ç¸®åˆ°:!sizeInMB!.!decimal!?
+                        echo  è«‹å˜—è©¦æ›¿æ›å½±ç‰‡æª”æ¡ˆï¼Œæˆ–ç¸®çŸ­å½±ç‰‡é•·åº¦ï¼›æ”¹è®Šè§£æåº¦
+                        echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
                             timeout /t 10 > nul
                             del /Q "!lockFile!" 2>nul
                             del /Q .\program\lastfailname.txt 2>nul
                                 exit
                 ) else (
-                rem ­«¶]regen Multi°j°é
+                rem é‡è·‘regen Multiè¿´åœˆ
                         goto :failGIF 
                     )
                 )
@@ -563,12 +563,12 @@ ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
                 if !Multigenfuncation_start! == false (
                     if !mp4count! == 1 (
                         cls
-                            echo  !originalFilename[%userChoice%]!.gif ¥Í¦¨¥¢±Ñ¡A¹F¨ìÀ£ÁY¦¸¼Æ¤W­­¡I
-                            echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-                            echo  ­ì©l¼v¤ù !originalFilename[%userChoice%]!.mp4 ¤w«O¯d¥¼§R°£
-                            echo  ³Ì«á¤@¦¸À£ÁY¨ì:!sizeInMB!.!decimal!?
-                            echo  ½Ğ¹Á¸Õ´À´«¼v¤ùÀÉ®×¡A©ÎÁYµu¼v¤ùªø«×¡F§ïÅÜ¸ÑªR«×
-                            echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w 
+                            echo  !originalFilename[%userChoice%]!.gif ç”Ÿæˆå¤±æ•—ï¼Œé”åˆ°å£“ç¸®æ¬¡æ•¸ä¸Šé™ï¼
+                            echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                            echo  åŸå§‹å½±ç‰‡ !originalFilename[%userChoice%]!.mp4 å·²ä¿ç•™æœªåˆªé™¤
+                            echo  æœ€å¾Œä¸€æ¬¡å£“ç¸®åˆ°:!sizeInMB!.!decimal!?
+                            echo  è«‹å˜—è©¦æ›¿æ›å½±ç‰‡æª”æ¡ˆï¼Œæˆ–ç¸®çŸ­å½±ç‰‡é•·åº¦ï¼›æ”¹è®Šè§£æåº¦
+                            echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 
                                 timeout /t 10 > nul
                                 del /Q "!lockFile!" 2>nul
                                 del /Q .\program\lastfailname.txt 2>nul
@@ -577,29 +577,29 @@ ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
                 )
 
 :final
-rem ¼g¤J¨Ï¥ÎªÌ¿ï¾ÜªºÀÉ¦W
+rem å¯«å…¥ä½¿ç”¨è€…é¸æ“‡çš„æª”å
 echo !originalFilename[%userChoice%]! > .\program\originalFilename[1].txt
-ping 127.0.0.1 -n 1 -w 10 >nul & rem ¤£¥i§R°£ªº©µ¿ğ§_«h·|¦]¬°¹L§Ö¦Ó¥X¿ù
+ping 127.0.0.1 -n 1 -w 10 >nul & rem ä¸å¯åˆªé™¤çš„å»¶é²å¦å‰‡æœƒå› ç‚ºéå¿«è€Œå‡ºéŒ¯
     if !mp4Count! == 0 ( ping 127.0.0.1 -n 1 -w 100 > nul 
         del /Q !lockFile! )
         del /Q .\program\frame*.png
-        del /Q GIF_generatoring_DONT-DEL.mp4 & rem §R°£­ì©l¼v¤ùÀÉ
-        rem ÀË´úmp4 count ¬O§_³Ñ¤U '1' ³¡¼v¤ù¡A¦pªG¬O Ãö±¼ Multigenfuncation_start=false
+        del /Q GIF_generatoring_DONT-DEL.mp4 & rem åˆªé™¤åŸå§‹å½±ç‰‡æª”
+        rem æª¢æ¸¬mp4 count æ˜¯å¦å‰©ä¸‹ '1' éƒ¨å½±ç‰‡ï¼Œå¦‚æœæ˜¯ é—œæ‰ Multigenfuncation_start=false
         echo mp4Count: !mp4Count! > nul
         if !mp4Count! == 1 ( 
             ping 127.0.0.1 -n 1 -w 100 > nul
             set "Multigenfuncation_start=false"
             )
-        rem final §ï¦W,final rename process
+        rem final æ”¹å,final rename process
         ren "finalgif_DONT-DEL.gif" "!originalFilename[%userChoice%]!.gif"
 cls
-echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-echo ¥¿¦bµ¥«İ¼È¦s¤å¥ó²M°£°õ¦æ¤¤... 
-echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-echo "¦¨¥\¥Í¦¨" ÀÉ®×¦WºÙ¬°: "!originalFilename[%userChoice%]!.gif"
-echo ¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w¢w
-echo ­«·s°õ¦æ¤¤...
-rem false=goto Multigenerator°j°é
+echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+echo æ­£åœ¨ç­‰å¾…æš«å­˜æ–‡ä»¶æ¸…é™¤åŸ·è¡Œä¸­... 
+echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+echo "æˆåŠŸç”Ÿæˆ" æª”æ¡ˆåç¨±ç‚º: "!originalFilename[%userChoice%]!.gif"
+echo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+echo é‡æ–°åŸ·è¡Œä¸­...
+rem false=goto Multigeneratorè¿´åœˆ
 if !Multigenfuncation_start! == true ( 
         goto :Multigenfuncation 
         )
