@@ -5,4 +5,4 @@
 - 如果防毒誤殺程式，請安裝**歐門信任憑證.cer**(如果你信任此開發者)
 - 或手動到防毒軟體**允許**．謝謝；因為使用自簽証書所以防毒容易誤報!
 > 本程式無毒且開源，請安心使用並仔細核對``SHA256``較驗值.
-> 本程式使用MIT授權，詳細資料請查看此Github專案 (link)[https://github.com/twkenxtis/GIF_Generator/]
+> 本程式使用MIT授權，詳細資料請查看此Github專案 [link](https://github.com/twkenxtis/GIF_Generator/)
