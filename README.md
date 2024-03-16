@@ -7,4 +7,4 @@
 > 本程式無毒且開源，請安心使用並仔細核對``SHA256``較驗值.
 > 本程式使用MIT授權，詳細資料請查看此Github專案 [link](https://github.com/twkenxtis/GIF_Generator/)
 ## Downloads
-```https://www.mediafire.com/file/ibcdu4js77txekj/GIF_Generator_WIN.zip/file```
+https://www.mediafire.com/file/ibcdu4js77txekj/GIF_Generator_WIN.zip/file
