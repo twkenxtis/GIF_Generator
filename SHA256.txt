@@ -1,4 +1,0 @@
-b3edfb354f1fd10715a2d3b2b73f1a7aa65dabc88a80fd100fb29f96f7dd3d23  GIF生成器_V5.2.1.exe
-
-如果發現程式的SHA256較驗值不一樣，請立即刪除程式!
-請回報到 "ytiq8nxnm@mozmail.com" 或回報給 歐門(omenbibi)，謝謝
