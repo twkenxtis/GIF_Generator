@@ -1,49 +1,16 @@
-::[Bat To Exe Converter]
-::
-::YAwzoRdxOk+EWAjk
-::fBw5plQjdCuDJFCH+343IR0aRQeNXA==
-::YAwzuBVtJxjWCl3EqQJgSA==
-::ZR4luwNxJguZRRnk
-::Yhs/ulQjdF+5
-::cxAkpRVqdFKZSDk=
-::cBs/ulQjdF+5
-::ZR41oxFsdFKZSTk=
-::eBoioBt6dFKZSDk=
-::cRo6pxp7LAbNWATEpCI=
-::egkzugNsPRvcWATEpCI=
-::dAsiuh18IRvcCxnZtBJQ
-::cRYluBh/LU+EWAjk
-::YxY4rhs+aU+IeA==
-::cxY6rQJ7JhzQF1fEqQJlZkoaHmQ=
-::ZQ05rAF9IBncCkqN+0xwdVsBAlXMbgs=
-::ZQ05rAF9IAHYFVzEqQIXAT3TuPsE1Js//318
-::eg0/rx1wNQPfEVWB+kM9LVsJDGQ=
-::fBEirQZwNQPfEVWB+kM9LVsJDGQ=
-::cRolqwZ3JBvQF1fEqQIRaAhdQRSOOSudL5Nc7+316viGtkIPNA==
-::dhA7uBVwLU+EWDk=
-::YQ03rBFzNR3SWATE+081JhldTg3i
-::dhAmsQZ3MwfNWATE1VIxKxNRAVbMbCu2D7YZ5vv+jw==
-::ZQ0/vhVqMQ3MEVWAtB9wSA==
-::Zg8zqx1/OA3MEVWAtB9wKhpHRGQ=
-::dhA7pRFwIByZRRmG/UVlaBhbSAHi
-::Zh4grVQjdCuDJFCH+34XAT3TuPsE1Js//30j3r21vaTW7EgFUYI=
-::YB416Ek+ZG8=
-::
-::
-::978f952a14a936cc963da21a135fa983
 cls
 @echo off
 setlocal enabledelayedexpansion
-rem debug 開關
+rem debug �}��
 set "debug=false" & rem true or false
-rem 版本號GIFV5_2
+rem ������GIFV5_2
 
-rem 代碼遺留
-del /Q .\program\window_count.txt 2>nul
+rem �N�X��d
+del /Q .\program\window_count.txt >nul
 
 set "file_list=GIF_generatoring_DONT-DEL.mp4 123_tempfile.mp4 finalgif_DONT-DEL.gif .\program\frame*.png .\program\finalgi*.gif .\program\testfram*.jpg GIF_testing_DONT-DEL.mp4"
 set "lockFile=.\program\lockfile.lck"
-rem 清單false=無異常
+rem �M��false=�L���`
 set "any_file_exists=false"
     for %%i in (%file_list%) do (
         if exist "%%i" ( set "any_file_exists=true" )
@@ -51,143 +18,160 @@ set "any_file_exists=false"
     if !any_file_exists! == true (
         if exist !lockFile! (
             cls
-                echo 檢測到多重視窗！
-                echo 該腳本的另一個實例已在運行。
-                echo ─────────────────────────────────────────────────────────────
-                echo 若已確認只開啟一個視窗，請按 'e' 已跳過此錯誤...
+                echo WARNING! script is already running, STOP and checking... [Multiple windows detected now]
+                echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                echo If you want to stop the script, please close the window and reopen the program. 
+                echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                echo If you have confirmed that only one window is open, press 'e' to skip this error...
                     choice /c pe /n /t 30 /d p
                     set "MultiwindowsChoice=!errorlevel!"
                     if !MultiwindowsChoice! == 1 (
                         cls
-                        echo 你選擇預設值P 'p' > nul
-                        rem 離開程式
+                        echo You choose the default value P 'p' > nul
+                        rem ���}�{��
                         goto :eof 
                     ) else if !MultiwindowsChoice! == 2 (
                         endlocal
                             setlocal enabledelayedexpansion
                             cls
-                            echo 你確定要跳過這個錯誤嗎？
-                            echo ──────────────────────────
-                                timeout /nobreak /t 1 > nul
-                            echo 按 'e' 確定跳過這個錯誤。
-                            echo ──────────────────────────
+                            echo Are you sure you want to skip this error?
+                            echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                                timeout /nobreak /t 2 > nul
+                            echo Press 'e' to confirm that the error is skipped.
+                            echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
                                 choice /c pe /n /t 10 /d p
-                                rem 跳過初始異常檢測
+                                rem ���L��l���`�˴�
                                 set "MultiwindowsChoice=!errorlevel!"
                                     if !MultiwindowsChoice! == 1 (
                                         cls
-                                        echo 你選擇預設值P 'p' > nul
-                                            rem 離開程式
+                                        echo You choose the default value P 'p' > nul
+                                            rem ���}�{��
                                             goto :eof 
                                             ) else if !MultiwindowsChoice! == 2 (
                                                 cls
-                                                echo 你選擇 'e' 確定跳過這個錯誤 > nul
-                                                    del /Q !lockFile! 2>nul
-                                                        rem 跳過初始異常檢測
+                                                del /Q GIF_generatoring_DONT-DEL.mp4 >nul
+                                                del /Q finalgi*.gif >nul 
+                                                del /Q finalgif_DONT-DEL.gif >nul
+                                                del /Q GIF_generatoring_DONT-DEL.mp4 >nul
+                                                del /Q 123_tempfile.mp4 >nul 
+                                                del /Q .\program\testfram*.jpg >nul
+                                                del /Q GIF_testing_DONT-DEL.mp4 >nul
+                                                del /Q !lockFile! >nul
+                                                del /Q .\program\frame*.png >nul
+                                                del /Q .\program\finalgif_DONT-DEL.gif >nul 
+                                                echo You choose 'e' to make sure the error is skipped. > nul
+                                                    del /Q !lockFile! >nul
+                                                        rem ���L��l���`�˴�
                                                         goto :source
                                             )
                         )
     )
-    del /Q .\program\finalgi*.gif 2>nul
-    del /Q GIF_generatoring_DONT-DEL.mp4 2>nul & rem 刪除影片原始檔
-    del /Q finalgi*.gif 2>nul 
-    del /Q 123_tempfile.mp4 2>nul 
-    del /Q .\program\testfram*.jpg 2>nul
-    del /Q GIF_testing_DONT-DEL.mp4 2>nul
-        rem 確認 .\program資料夾是否還有frame*.png
+    del /Q .\program\finalgi*.gif >nul
+    del /Q GIF_generatoring_DONT-DEL.mp4 >nul
+    del /Q finalgi*.gif >nul 
+    del /Q finalgif_DONT-DEL.gif >nul
+    del /Q GIF_generatoring_DONT-DEL.mp4 >nul
+    del /Q 123_tempfile.mp4 >nul 
+    del /Q .\program\testfram*.jpg >nul
+    del /Q GIF_testing_DONT-DEL.mp4 >nul
+        rem �T�{ .\program��Ƨ��O�_�٦�frame*.png
         :delprogramanypng
             if exist ".\program\frame*.png" ( 
-                rem 相對路徑跳到.\program,Del完自動popd回到 pushd 跳之前的路徑
-                pushd .\program & del /Q frame*.png 2>nul & popd
+                rem �۹���|����.\program,Del���۰�popd�^�� pushd �����e�����|
+                pushd .\program & del /Q frame*.png >nul & popd
                     ping 127.0.0.1 -n 1 -w 20 > nul
         goto :delprogramanypng
         )
-            cls
-            echo ─────────────────────────────────────────────────────────────
-            echo 請稍後．正在初始化... 初始化失敗！
-            echo ─────────────────────────────────────────────────────────────
-            echo 請關閉視窗，重新開啟本程式。
-            echo ─────────────────────────────────────────────────────────────
-                timeout /nobreak /nobreak /t 1 2>nul
-            echo 可能於上次運作時未正確關閉程式，或誤刪除生成中的檔案。
-            echo 三秒後自動退出...
+            echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+            echo Please wait. Initializing... Initialization failed!
+            echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+            echo Please close the window and reopen the program.
+            echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                timeout /nobreak /nobreak /t 1 >nul
+            echo It is possible that the program was not closed correctly during the last run, or the generated file was deleted by mistake.
+            echo Exit automatically after 3 seconds...
                 timeout /nobreak /t 3 > nul 
                     exit
     )
 
-rem ----異常判斷和多重視窗判斷，異常檢測結束----
+rem ----���`�P�_�M�h�������P�_�A���`�˴�����----
 :source
+
 setlocal enabledelayedexpansion
-rem 預設不走Multi通道 false
+rem �w�]����Multi�q�D false
 set "Multigenfuncation_start=false"
-rem 清空!(del) 寫入失敗影片的的檔名 用於!lastfailname!
+rem �M��!(del) �g�J���Ѽv�������ɦW �Ω�!lastfailname!
 del /Q .\program\lastfailname.txt
 
-rem ----初始化結束 ----
+rem ----��l�Ƶ��� ----
 
 :checkMP4
 rem defines the lock file name
-            echo Locking... > "!lockFile!" 2>nul
+            echo Locking... > "!lockFile!" >nul
 REM Variable initialization
 set "originalFilename="
 set "mp4Count=0"
 set "ffmpegPath=.\program\ffmpeg" & set "ffprobePath=.\program\ffprobe"
 set "videoFile=GIF_generatoring_DONT-DEL.mp4" 
-rem GIFSKI Variable 變數
+rem GIFSKI Variable �ܼ�
 set "quality=100" & set "motionQuality=90" & set "lossyQuality=75"
-rem 歸0 regenGIF'變數
+rem �k0 regenGIF'�ܼ�
 set "regenGIF_Count=0"
-rem 歸0 oneDeplicatname
+rem �k0 oneDeplicatname
 set "oneDeplicatname="
-rem 歸0 oneDeplicatname
+rem �k0 oneDeplicatname
 set "Orgfilename="
-rem 歸0 userChoice
+rem �k0 userChoice
 set "originalFilename[%userChoice%]="
-rem 歸0 suffixr
+rem �k0 suffixr
 set "suffixr="
-rem 歸0 GIFsearchname
+rem �k0 GIFsearchname
 set "GIFsearchname="
-rem 歸0 failcount
+rem �k0 failcount
 set /a "failcount=0"
+
+
 rem ----------------------
         if !debug! == true (
         cls
         echo First :checkmp4 funcation debug!
-        echo ─────────────────────────────────────────────────────────────
+        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
         echo mp4Count: !mp4Count!
         echo Multigenfuncation_start !Multigenfuncation_start!
         pause
         )
 
-    rem 讀取最後一次生成的檔案
+    rem Ū���̫�@���ͦ����ɮ�
     set /p "templastgen=" < .\program\originalFilename[1].txt
     set "lastgen=!templastgen:~0,-1!" & rem !variable:~start,length!
-    echo 讀取的原始檔:　"!templastgen!" > nul
-    echo 刪除字符串的最後一個字元:　"!lastgen!" > nul
+    echo Original file read.�@"!templastgen!" > nul
+    echo Delete the last character of the string.�@"!lastgen!" > nul
 
-rem :Cycledetection 至多30S !Cycledetection_count!
+rem :Cycledetection �ܦh30S !Cycledetection_count!
 set "Cycledetection_count=1"
-rem 跑 1 video or Multi video funcation using !mp4count!
+rem �] 1 video or Multi video funcation using !mp4count!
 :Cycledetection
         if !mp4Count! == 0 (
+            cls
             for %%F in (*.mp4) do (
                 set /A mp4Count+=1
                 set "originalFilename[!mp4Count!]=%%~nF"
                 )
-                cls
-                echo 請將影片檔案拖動到與此共同的資料夾內。
-                echo ─────────────────────────────────────────────────────────────
-                echo 最後一次生成的GIF：^|!lastgen!.gif^|
-                echo ─────────────────────────────────────────────────────────────
-                echo 每秒檢測中.... 
-            rem 每秒檢測一次
+                echo Please drag the video file to a folder that is common to this one.
+                echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                echo Last generated File name�G^|!lastgen!^|
+                echo All the files generated last time are placed in the output folder
+                echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                echo Auto scan folder for any video files...
+                echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                echo power by omenbibi
             timeout /nobreak /t 1 > nul
-                if !Cycledetection_count! == 3 (
+                if !Cycledetection_count! == 8 (
                     cls
-                        echo 3 秒內無影片，程式即將離開...
-                        echo ─────────────────────────────────────────────────────────────
-                        echo 如需返回 GIF 生成 ，請按 'e'
-                        echo ─────────────────────────────────────────────────────────────
+                        echo No video in 7 seconds, the program is leaving...
+                        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                        echo To return to GIF generation, press 'e'.
+                        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
                         choice /c pe /n /t 5 /d p
                         if errorlevel 2 (
                             set "Cycledetection_count=1"
@@ -197,53 +181,52 @@ rem 跑 1 video or Multi video funcation using !mp4count!
                             goto :eof
                         )
                 )
-            rem :Cycledetection 循環檢測funcation
+            rem :Cycledetection �`���˴�funcation
             set /a "Cycledetection_count+=1"
+                cls
                             goto :Cycledetection
 ) else if !mp4Count! == 1 (
     set "Cycledetection_count=1"
         set "userChoice=1"
-        cls
-        echo 這是單影片迴圈 > nul
-        echo 選擇一部影片 "!originalFilename[1]!.mp4"
-        echo ─────────────────────────────────────────────────────────────
+        echo This is a single video loop. > nul
+        echo Select a video "!originalFilename[1]!.mp4"
+        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
             if !debug! == true ( pause )
                         goto :GIF
 ) else (
     set "Cycledetection_count=1"
-        rem 確定跑 multivideoList 歸true
+        rem �T�w�] multivideoList �ktrue
         set "Multigenfuncation_start=true"
                     goto :Multigenfuncation
 )
 
 :Multigenfuncation
     if !mp4Count! == 1 (
-        rem 清空!(del) 寫入失敗影片的的檔名 用於!lastfailname!
+        rem �M��!(del) �g�J���Ѽv�������ɦW �Ω�!lastfailname!
         del /Q .\program\lastfailname.txt
      )
 
         if !debug! == true (
         cls
-        echo Multigenfuncation 被啟動!
+        echo Multigenfuncation activated!
         echo Multigenfuncation_start: !Multigenfuncation_start!
         echo originalFilename: !originalFilename!
         pause
         )
 
 set "mp4Count=0"
-    REM 遍歷所有.mp4文件，計算文件數量並存儲原始文件名
+    REM �M���Ҧ�.mp4���A�p����ƶq�æs�x��l���W
     for %%F in (*.mp4) do (
         set /A mp4Count+=1
         set "originalFilename[!mp4Count!]=%%~nF"
     )
-    REM 顯示所有.mp4文件的列表
-        cls
-        echo 檢測到多部影片，啟動循環生成...
-        echo ────────────────────────────────────────────────────────────────────────────────────
+    REM ��ܩҦ�.mp4��󪺦C��
+        echo Detects multiple videos, starts a loop to generate...
+        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
         for /l %%i in (1, 1, !mp4Count!) do ( 
-            echo File： %%i !originalFilename[%%i]!
+            echo File�G %%i !originalFilename[%%i]!
         )
-        echo ────────────────────────────────────────────────────────────────────────────────────
+        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
  
             rem this is a Multi's debug
             if %debug% == true (
@@ -253,18 +236,18 @@ set "mp4Count=0"
             timeout /T 2
             )
 
-        REM 預設userchoice '1' 跳過檔案就改變 '變數'
+        REM �w�]userchoice '1' ���L�ɮ״N���� '�ܼ�'
         set /a "userChoice=1"
 
             :failGIF
             if !originalFilename[%userChoice%]! == !lastfailname! ( 
                 for /l %%i in (1, 1, !mp4Count!) do ( 
-                    echo File： %%i !originalFilename[%%i]! > nul
+                    echo File�G %%i !originalFilename[%%i]! > nul
                 )
                 set /a "userChoice+=1"
                     if !userChoice! gtr !mp4Count! (
                         set "userChoice=1"
-                            rem 清空!(del) 寫入失敗影片的的檔名 用於!lastfailname!
+                            rem �M��!(del) �g�J���Ѽv�������ɦW �Ω�!lastfailname!
                             del /Q .\program\lastfailname.txt
                                 goto :GIF
                     )
@@ -272,91 +255,91 @@ set "mp4Count=0"
 rem continue :GIF funcation
 
 :GIF
-rem 檢查檔名是否 '!' '^'
-rem 嘗試拆解一張 .jpg to .\program\testfram_DONT-DEL.jpg 測試檔名.
+rem �ˬd�ɦW�O�_ '!' '^'
+rem ���թ�Ѥ@�i .jpg to .\program\testfram_DONT-DEL.jpg �����ɦW.
 ren "!originalFilename[%userChoice%]!.mp4" "GIF_testing_DONT-DEL.mp4"
-    for %%a in (GIF_testing_DONT-DEL.mp4) do ( %ffmpegPath% -i GIF_testing_DONT-DEL.mp4 -vf "fps=1" -vframes 1 .\program\testfram_DONT-DEL.jpg 2>nul )
+    for %%a in (GIF_testing_DONT-DEL.mp4) do ( %ffmpegPath% -i GIF_testing_DONT-DEL.mp4 -vf "fps=1" -vframes 1 .\program\testfram_DONT-DEL.jpg >nul )
         if exist ".\program\testfram_DONT-DEL.jpg" (
-            echo 文件存在，返回 true >nul
+            echo ���s�b�A��^ true >nul
                 del /Q .\program\testfram_DONT-DEL.jpg
                     ren "GIF_testing_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
             ) else (
                 del /Q "!lockFile!" >nul
                 del /Q finalgi*.gif > nul 
                 del /Q .\program\finalgi*.gif > nul 
-                echo 執行退出程式中... 請勿在此期間關閉視窗！
-                echo ────────────────────────────────────────────────────────────────────────────────────
+                echo Executing the exit program... Do not close the window during this time!
+                echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
                 if exist ".\program\frame*.png" ( 
-                    rem 確認 .\program資料夾是否還有frame*.png
+                    rem �T�{ .\program��Ƨ��O�_�٦�frame*.png
                     :delprogramany.png_2
                         if exist ".\program\frame*.png" ( 
-                            rem 相對路徑跳到.\program,Del完自動popd回到 pushd 跳之前的路徑
-                            pushd .\program & del /Q frame*.png 2>nul & popd
+                            rem �۹���|����.\program,Del���۰�popd�^�� pushd �����e�����|
+                            pushd .\program & del /Q frame*.png >nul & popd
                                 ping 127.0.0.1 -n 1 -w 20 > nul
                                         goto :delprogramany.png_2
         ) 
     )
 
 ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
-rem 跑非法字元 !Multigenfuncation_start! 歸 false
+rem �]�D�k�r�� !Multigenfuncation_start! �k false
 set "Multigenfuncation_start=false"
-    cls
-    echo 檢測到檔名含有 '︿' 或 '?' 等非法字元。
-    echo ──────────────────────────────────────────────────────────────────────────────
-    echo 請更改檔名後重試！三秒秒後自動退出...
+    echo A file name containing illegal characters such as '�s' or '? or '?' in the file name.
+    echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+    echo Please change the file name and try again! Exit automatically after 3 seconds...
         timeout /nobreak /t 3 > nul
                 goto :eof
 )
 
-cls
-echo 執行中 選擇的檔案: !originalFilename[%userChoice%]!.mp4 ^(這可能要等待很長的時間....^)
-echo ──────────────────────────────────────────────────────────────────────────────
-echo 正在將拆解成來生成GIF...
-echo ──────────────────────────────────────────────────────────────────────────────
+echo Running Selected Files. !originalFilename[%userChoice%]!.mp4 ^(This could be a long wait ....^)
+echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+echo It's being disassembled to generate GIFs...
+echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
 
 if !debug! == true ( echo ^|!originalFilename[%userChoice%]!^| & pause )
 
-rem 檢查資料夾有無相同檔名的GIF
+rem �ˬd��Ƨ����L�ۦP�ɦW��GIF
 rem check_if_GIF_alreadyexit 
+cd "output"
 for %%i in (*.mp4) do ( set "!originalFilename[%userChoice%]!=%%~ni")
 rem checks if there is any GIF file named !originalFilename[%userChoice%]!
 dir /b | find /i "!originalFilename[%userChoice%]!.gif" > nul
 rem determines the execution result of the above command, if it exists, output a prompt, otherwise output "false"
 if errorlevel 1 (
     rem determines the execution result of the above command, if it exists, output a prompt, otherwise output "false"
-        if !debug! == true ( echo 沒檢測到檔名相同的GIF，繼續生成
+        if !debug! == true ( echo �S�˴����ɦW�ۦP��GIF�A�~��ͦ�
                             pause )
-            rem 改名字已利開始生成
+            cd ..
+            rem ��W�r�w�Q�}�l�ͦ�
             ren "!originalFilename[%userChoice%]!.mp4" "GIF_generatoring_DONT-DEL.mp4"
                             goto :startGIFgenerator
 ) else (
         cls
-        echo 檢測到相同檔名的GIF!
+        echo Detected GIFs with the same file name!
             :checkGIF_generatoring_DONT-DEL.mp4_Status
                 if exist GIF_generatoring_DONT-DEL.mp4 (
-                    REM 檢測到有GIF生成中，請稍等...
+                    REM �˴��즳GIF�ͦ����A�еy��...
                     ping 127.0.0.1 -n 1 -w 50 >nul
                 goto :checkGIF_generatoring_DONT-DEL.mp4_Status
             )
             set "Orgfilename=!originalFilename[%userChoice%]!.mp4"
-            set "searchname=!originalFilename[%userChoice%]! - 重複生成 (1).gif"
+            set "searchname=!originalFilename[%userChoice%]! - REGN (1).gif"
                 if exist "!searchname!" (
                     cls
-                    echo 找到檔名包含" - 重複生成 (1)"檔案
+                    echo Find files with" - REGN (1)" file
 
                         if !debug! == true (
                                 cls
-                                echo 找到檔名包含" - 重複生成 (1)"檔案
+                                echo Find files with" - REGN (1)" file
                                 echo ----------------------------------------------
-                                echo 檔名已經有_重新命名^(number^)，將檢測數字並"遞增"
+                                echo �ɦW�w�g��_���s�R�W^(number^)�A�N�˴��Ʀr��"���W"
                                 pause )
                             
                     set "Multinamesearch="
                     set "tempsuffixr="
                     for %%F in ( *.gif ) do (
                     set "tempMultinamesearch=%%~nF"
-                        rem 小名 - 重複生成 (1).gif
-                        for /f "tokens=2 delims=重複生成()" %%i in ( "!tempMultinamesearch!" ) do ( 
+                        rem �p�W - REGN (1).gif
+                        for /f "tokens=2 delims=REGN()" %%i in ( "!tempMultinamesearch!" ) do ( 
                             set "firstnametempMultinamesearch=%%~nF"
                             echo !firstnametempMultinamesearch!
 
@@ -367,119 +350,115 @@ if errorlevel 1 (
                             ) 
                         )
                     )
-                    if !suffixr! == 100 ( cls & echo 目標GIF達到100次重複生成次數上限，按任意鍵退出... & timeout /T 10 > nul & exit  )
+                    cd ..
+                    if !suffixr! == 100 ( cls & echo Target GIF reaches 100 REGN count limit, press any key to exit... & timeout /T 10 > nul & exit  )
 
                                     if !debug! == true (
                                     cls
-                                    echo suffixr is "!suffixr!"  & rem !suffix!= - 重複生成 (裡面的數字 +1) debug
-                                    echo 使用者選擇的檔案.mp4: !Orgfilename! & pause ) 
+                                    echo suffixr is "!suffixr!"  & rem !suffix!= - REGN (�̭����Ʀr +1) debug
+                                    echo User-selected files.mp4: !Orgfilename! & pause ) 
                                                                           
-                    rem 重新賦予檔名新名字
-                    ren "!originalFilename[%userChoice%]!.mp4" "!originalFilename[%userChoice%]! - 重複生成 (!suffixr!).mp4"
-                    rem 新名字檔名歸還給原始檔名變數
-                    set "Multiname= - 重複生成 (!suffixr!).mp4"
-                    set "originalFilename[%userChoice%]=!originalFilename[%userChoice%]! - 重複生成 (!suffixr!)"
+                    rem ���s�ᤩ�ɦW�s�W�r
+                    ren "!originalFilename[%userChoice%]!.mp4" "!originalFilename[%userChoice%]! - REGN (!suffixr!).mp4"
+                    rem �s�W�r�ɦW�k�ٵ���l�ɦW�ܼ�
+                    set "Multiname= - REGN (!suffixr!).mp4"
+                    set "originalFilename[%userChoice%]=!originalFilename[%userChoice%]! - REGN (!suffixr!)"
                                                                 
                         if !debug! == true ( cls
-                        echo 原始檔名: "!Orgfilename!" & rem 變數'有'.mp4 (空格都沒問題)
-                        echo 最終檔名: "!originalFilename[%userChoice%]!" & rem '無'.mp4 (空格都沒問題)
+                        echo ��l�ɦW: "!Orgfilename!" & rem �ܼ�'��'.mp4 (�Ů泣�S���D)
+                        echo �̲��ɦW: "!originalFilename[%userChoice%]!" & rem '�L'.mp4 (�Ů泣�S���D)
+                        echo �T�{�W�h���|�O�_��W�� !originalFilename[%userChoice%]!.mp4 
                         pause )
-                                                                    
-                    rem 這邊重新命名 "GIF_generatoring_DONT-DEL"，開始跑GIF生成 
+
+                    rem �o�䭫�s�R�W "GIF_generatoring_DONT-DEL"�A�}�l�]GIF�ͦ� 
                     ren "!originalFilename[%userChoice%]!.mp4" "!videoFile!"
                     
                         if !debug! == true (
                             cls 
                             echo ---------------------------------------------------
-                            rem 最終確認檔名變數有無歸還給原始變數，並且；不需要帶'副檔名'
-                            echo 上步驟已經將資料夾內檔案重命名成 'GIF_generatoring_DONT-DEL' 開始跑生成
+                            rem �̲׽T�{�ɦW�ܼƦ��L�k�ٵ���l�ܼơA�åB�F���ݭn�a'���ɦW'
+                            echo �W�B�J�w�g�N��Ƨ����ɮ׭��R�W�� 'GIF_generatoring_DONT-DEL' �}�l�]�ͦ�
                             echo ---------------------------------------------------
-                            echo 影片檔名: ^|!originalFilename[%userChoice%]!^| & pause )
+                            echo �v���ɦW: ^|!originalFilename[%userChoice%]!^| & pause )
                     cls 
-                        echo 檢測到"!originalFilename[%userChoice%]!.gif"　已經存在資料夾內。
-                        echo 正在重新命名已繼續....
-                        if !debug! == true ( cls & echo 確認已經改名成 'GIF_generatoring_DONT-DEL' & pause )
+                        echo checking "!originalFilename[%userChoice%]!.gif" Already exists in the folder.
+                        echo Renaming is in progress Continue ....
+                        if !debug! == true ( cls & echo �T�{�w�g��W�� 'GIF_generatoring_DONT-DEL' & pause )
                                     goto :startGIFgenerator
 
                 ) else ( cls
-                    echo 沒找到包含" - 重複生成 (1)"檔案
-                            if !debug! == true ( cls & echo 沒找到包含" - 重複生成 (1)"檔案 & pause )
-                    set "oneDeplicatname=!originalFilename[%userChoice%]! - 重複生成 (1)"
+                    echo �S���]�t" - REGN (1)"�ɮ� >nul
+                            if !debug! == true ( cls & echo �S���]�t" - REGN (1)"�ɮ� & pause )
+                    cd ..
+                    set "oneDeplicatname=!originalFilename[%userChoice%]! - REGN (1)"
                     ren "!Orgfilename!" "!oneDeplicatname!"
-                    rem 新名字檔名歸還給原始檔名變數
+                    rem �s�W�r�ɦW�k�ٵ���l�ɦW�ܼ�
                     set "originalFilename[%userChoice%]=!oneDeplicatname!"
 
                         if !debug! == true ( cls
-                        echo Orgfilename: "!Orgfilename!" & rem 變數'有'.mp4 (空格都沒問題)
-                        echo originalFilename[%userChoice%]: "!originalFilename[%userChoice%]!" & rem '無'.mp4 (空格都沒問題)
+                        echo Orgfilename: "!Orgfilename!" & rem �ܼ�'��'.mp4 (�Ů泣�S���D)
+                        echo originalFilename[%userChoice%]: "!originalFilename[%userChoice%]!" & rem '�L'.mp4 (�Ů泣�S���D)
                         pause )
                                                 
-                    rem 這邊重新命名 "GIF_generatoring_DONT-DEL"，開始跑GIF生成 
+                    rem �o�䭫�s�R�W "GIF_generatoring_DONT-DEL"�A�}�l�]GIF�ͦ� 
                     ren "!originalFilename[%userChoice%]!" "!videoFile!"
 
-                    cls 
-                        echo 檢測到"!originalFilename[%userChoice%]!.gif"　已經存在資料夾內。
-                        echo 正在重新命名已繼續....
+                        echo checking "!originalFilename[%userChoice%]!.gif" Already exists in the folder.
+                        echo echo Renaming is in progress Continue ....
                                     goto :startGIFgenerator
                     )
 )
 
 :startGIFgenerator
-rem 使用資料夾內為檔名!videoFile!(GIF_generatoring_DONT-DEL.mp4)來進行圖片ffmpeg拆解
+rem �ϥθ�Ƨ������ɦW!videoFile!(GIF_generatoring_DONT-DEL.mp4)�Ӷi��Ϥ�ffmpeg���
 for %%i in ( GIF_generatoring_DONT-DEL.mp4 ) do ( %%~ni )
 REM before grnerator GIFSKI Cal vidoe fps using ffprobe
-for /f "tokens=1,*" %%a in ('%ffprobePath% -v error -select_streams v -show_entries stream^=r_frame_rate -of csv^=p^=0 "%videoFile%"') do ( set "fps=%%a %%b" ) 
-rem FPS 計算
-set /a "fps=!fps! + 1" & set /a "fpsdone=!fps! / 4 + 2 "
-rem if video fps more than 24 fps ffmpeg to 24 fps
-if !fps! gtr 23 (
-    cls
-    echo 檢測到選擇的檔案: !originalFilename[%userChoice%]!.mp4 大於 24 FPS，啟動轉檔。 
-    echo ──────────────────────────────────────────────────────────────────────────────────
-    echo ^(這可能要等待很長的時間....^)
-    %ffmpegPath% -hide_banner -y -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=1,setpts=5.0*PTS" -vsync vfr -c:v libx265 -crf 51 -c:a copy 123_tempfile.mp4 2>nul
-        del /Q 123_tempfile.mp4
-    cls
-        echo !originalFilename[%userChoice%]!.mp4 轉檔成功，正在將影片轉檔請稍後。 
-        echo ──────────────────────────────────────────────────────────────────────────────────
-        echo ^(這可能要等待很長的時間....^)
-        %ffmpegPath% -hide_banner -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=!fpsdone!" -vsync vfr .\program\frame%%04d.png  2>nul
+for /f "tokens=1,*" %%a in ('%ffprobePath% -v error -select_streams v -show_entries stream^=r_frame_rate -of csv^=p^=0 "%videoFile%"') do ( set "fps=%%a %%b" )
+for /f "tokens=1,*" %%a in ('%ffprobePath% -v error -select_streams v -show_entries stream^=width -of csv^=p^=0 "%videoFile%"') do ( set "video_width=%%a %%b" )
+rem FPS �p��
+set /a "fps=!fps! + 1" & set /a "fpsdone=!fps! / 1.5 + 7 "
+if !fps! gtr 58 (
+    echo Detects the selected files: !originalFilename[%userChoice%]!.mp4 Greater than 58 FPS, start the transfer. 
+    echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+    echo ^(This could be a long wait ....^)
+    %ffmpegPath% -y -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=1,setpts=5.0*PTS" -vsync vfr -c:v libx265 -crf 20 -r 24 -c:a copy GIF_generatoring_DONT-DEL.mp4 >nul
+        echo !originalFilename[%userChoice%]!.mp4 The transfer was successful, the video is being transferred, please wait. 
+        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+        echo ^(This could be a long wait ....^)
+        %ffmpegPath% -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=!fpsdone!" -vsync vfr .\program\frame%%04d.png  >nul
 ) else (
-    cls
-    echo 選擇的檔案: !originalFilename[%userChoice%]!.mp4 正在轉檔。 
-    echo ──────────────────────────────────────────────────────────────────────────────────
-    echo ^(這可能要等待很長的時間....^)
-    %ffmpegPath% -hide_banner -y -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=1,setpts=5.0*PTS" -vsync vfr -c:v libx265 -c:a copy 123_tempfile.mp4  2>nul
-        del /Q 123_tempfile.mp4
-        %ffmpegPath% -hide_banner -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=!fpsdone!" -vsync vfr .\program\frame%%04d.png  2>nul
+    echo Selected file. !originalFilename[%userChoice%]!.mp4 , start the transfer. 
+    echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+    echo ^(This could be a long wait ....^)
+        %ffmpegPath% -i GIF_generatoring_DONT-DEL.mp4 -vf "fps=!fpsdone!" -vsync vfr .\program\frame%%04d.png  >nul
 )
 rem start the first GIF generator (gifski) (.\program\gifski)
 cls
-echo !originalFilename[%userChoice%]!.mp4 正在生成GIF... 請勿在此期間關閉視窗！
-echo ──────────────────────────────────────────────────────────────────────────────────
-echo 運作期間請勿刪除位於的暫存檔案，暫時生成的圖片影片等。
-echo ──────────────────────────────────────────────────────────────────────────────────
-.\program\gifski --width 720 --fps %fpsdone% --quality 100 --motion-quality=100 --lossy-quality=75 -o .\program\finalgif_DONT-DEL.gif .\program\frame*.png 2>nul
+echo !originalFilename[%userChoice%]!.mp4 Generating GIFs... Please do not close the window during this time!
+echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+echo Do not delete the temporary files, temporarily generated images and videos, etc., during operation.
+echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+.\program\gifski --width %video_width% --fps %fpsdone% --quality 100 --motion-quality=100 --lossy-quality=100 -o .\program\finalgif_DONT-DEL.gif .\program\frame*.png >nul
     rem after gif create checking movement is successful or not
     call :movecheck
         goto :Calgifsize 
         rem jump to  :Calgifsize
 
 :regenGIF
+cls
 set /a "regenGIF_Count+=1"
 rem starting compress gif size
-cls
-    echo 啟動壓縮，累計壓縮!regenGIF_Count!次，上限為10次 ^|^ !originalFilename[%userChoice%]!.gif 目前壓縮到 %sizeInMB%.%decimal% MB 
-    echo ──────────────────────────────────────────────────────────────────────────────────
-    echo 請勿在此期間關閉視窗！
-    echo ──────────────────────────────────────────────────────────────────────────────────
-    echo 運作期間請勿刪除位於的暫存檔案，暫時生成的圖片影片等。
-    echo ──────────────────────────────────────────────────────────────────────────────────   
+    echo Startup Compression, Cumulative Compression !regenGIF_Count! times, up to 5 times. ^|^ !originalFilename[%userChoice%]!.gif Currently compressed to %sizeInMB%.%decimal% MB 
+    echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+    echo Do not close the window during this period! ^(Limit is 200MB^)
+    echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+    echo Do not delete the temporary files, temporarily generated images and videos, etc., during operation.
+    echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w   
 rem Second gifski generator
-.\program\gifski --width 720 --fps %fpsdone% --quality %quality% --motion-quality=%motionQuality% --lossy-quality=%lossyQuality% -o .\program\finalgif_DONT-DEL.gif .\program\frame*.png 2>nul
+.\program\gifski --width %video_width% --fps %fpsdone% --quality %quality% --motion-quality=%motionQuality% --lossy-quality=%lossyQuality% -o .\program\finalgif_DONT-DEL.gif .\program\frame*.png >nul
 
 :movecheck
-rem √每次GIF生成完都要檢查是否移動成功!
+rem �ԨC��GIF�ͦ������n�ˬd�O�_���ʦ��\!
 move .\program\finalgif_DONT-DEL.gif .\
 if exist finalgif_DONT-DEL.gif (
     echo 'finalgif_DONT-DEL.gif' moved. > nul
@@ -503,103 +482,115 @@ rem Cal finalgif_DONT-DEL.gif size
         )
         echo File Size: %fileSize% bytes > nul
         echo Size in MB: %sizeInMB%.%decimal% MB > nul
-            rem 區域變數 & 全域變數
+            rem �ϰ��ܼ� & �����ܼ�
 
 rem check GIF size 10MBlimit
 rem checkfinalgif_status
 for %%F in (finalgif_DONT-DEL.gif) do set "fileSize=%%~zF"
-if %fileSize% gtr 10485759 (
+if %fileSize% gtr 208666624 (
     set /a "lossyQuality-=5"
     set /a "motionQuality-=1"
     set /a "quality-=7"
-    REM 避免變數歸0
-        if !lossyQuality! lss 10 set "lossyQuality=75" 
-        if !motionQuality! lss 10 set "motionQuality=90"
-        if !quality! lss 10 set "quality=100"
-    REM 壓縮次數調整 compress count
-    if !regenGIF_Count! gtr 9 ( goto :regenGIF_Count )
-        rem 計算regenGIF failcount
+    REM �קK�ܼ��k0
+        if !lossyQuality! lss 5 set "lossyQuality=75" 
+        if !motionQuality! lss 5 set "motionQuality=90"
+        if !quality! lss 5 set "quality=100"
+    REM ���Y���ƽվ� compress count
+    if !regenGIF_Count! gtr 4 ( goto :regenGIF_Count )
+        rem �p��regenGIF failcount
                 goto :regenGIF
 ) else (
-    rem 壓縮成功跑final funcation
+    rem ���Y���\�]final funcation
     goto :final
         )
 
 :regenGIF_Count
-rem　壓縮失敗 regen GIF fail funcation
+rem�@���Y���� regen GIF fail funcation
 del /Q finalgi*.gif 2> nul
-rem 把檔名 GIF_generatoring_DONT-DEL.mp4 還原成原來的檔名，注意檔名空格的還原狀況！
+rem ���ɦW GIF_generatoring_DONT-DEL.mp4 �٭즨��Ӫ��ɦW�A�`�N�ɦW�Ů檺�٭쪬�p�I
 ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
         if exist ".\program\frame*.png" ( pushd .\program & del /Q frame*.png 2> nul & popd )      
-            rem 寫入失敗影片的的檔名 用於!lastfailname!
+            rem �g�J���Ѽv�������ɦW �Ω�!lastfailname!
             echo !originalFilename[%userChoice%]! > .\program\lastfailname.txt
-            rem 讀取失敗影片的的檔名 用於!lastfailname!
+            rem Ū�����Ѽv�������ɦW �Ω�!lastfailname!
             set /p "templastfail=" < .\program\lastfailname.txt
             set "lastfailname=!templastfail:~0,-1!" & rem !variable:~start,length!
-            echo 讀取的原始檔:　"!templastfail!" > nul
-            echo 刪除字符串的最後一個字元:　"!lastfailname!" > nul
-                rem 計算regenGIF failcount
+            echo Ū������l��:�@"!templastfail!" > nul
+            echo Delete the last character of a string:�@"!lastfailname!" > nul
+            del /Q .\program\frame*.png >nul
+                rem �p��regenGIF failcount
                 set /a "failcount+=1"
                 if !Multigenfuncation_start! == true ( 
                     if !failcount! gtr 4 (
                     ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"    
-                    cls
-                        echo  !originalFilename[%userChoice%]!.gif 生成失敗，達到壓縮次數上限！
-                        echo ──────────────────────────────────────────────────────────────────────────────────
-                        echo  原始影片 !originalFilename[%userChoice%]!.mp4 已保留未刪除
-                        echo  最後一次壓縮到:!sizeInMB!.!decimal!?
-                        echo  請嘗試替換影片檔案，或縮短影片長度；改變解析度
-                        echo ────────────────────────────────────────────────────────────────────────────────── 
+                        echo  !originalFilename[%userChoice%]!.gif Generation failed, the upper limit of compression times has been reached!
+                        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                        echo  Video file: !originalFilename[%userChoice%]!.mp4
+                        echo  The last compression to:!sizeInMB!.!decimal!MB
+                        echo  Please try to replace the video file, shorten the video length, or change the resolution.
+                        echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w 
                             timeout /t 10 > nul
-                            del /Q "!lockFile!" 2>nul
-                            del /Q .\program\lastfailname.txt 2>nul
+                            del /Q "!lockFile!" >nul
+                            del /Q .\program\lastfailname.txt >nul
                                 exit
                 ) else (
-                rem 重跑regen Multi迴圈
+                rem ���]regen Multi�j��
                         goto :failGIF 
                     )
                 )
 
                 if !Multigenfuncation_start! == false (
                     if !mp4count! == 1 (
-                        cls
-                            echo  !originalFilename[%userChoice%]!.gif 生成失敗，達到壓縮次數上限！
-                            echo ──────────────────────────────────────────────────────────────────────────────────
-                            echo  原始影片 !originalFilename[%userChoice%]!.mp4 已保留未刪除
-                            echo  最後一次壓縮到:!sizeInMB!.!decimal!?
-                            echo  請嘗試替換影片檔案，或縮短影片長度；改變解析度
-                            echo ────────────────────────────────────────────────────────────────────────────────── 
+                            echo  !originalFilename[%userChoice%]!.gif Generation failed, the upper limit of compression times has been reached!�I
+                            echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+                            echo  Video file: !originalFilename[%userChoice%]!.mp4
+                            echo  The last compression to:!sizeInMB!.!decimal!MB
+                            echo  Please try to replace the video file, shorten the video length, or change the resolution.
+                            echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w 
                                 timeout /t 10 > nul
-                                del /Q "!lockFile!" 2>nul
-                                del /Q .\program\lastfailname.txt 2>nul
+                                del /Q "!lockFile!" >nul
+                                del /Q .\program\lastfailname.txt >nul
                                     exit
                     )
                 )
 
 :final
-rem 寫入使用者選擇的檔名
+rem �g�J�ϥΪ̿�ܪ��ɦW
 echo !originalFilename[%userChoice%]! > .\program\originalFilename[1].txt
-ping 127.0.0.1 -n 1 -w 10 >nul & rem 不可刪除的延遲否則會因為過快而出錯
+ping 127.0.0.1 -n 1 -w 50 >nul & rem ���i�R��������_�h�|�]���L�֦ӥX��
     if !mp4Count! == 0 ( ping 127.0.0.1 -n 1 -w 100 > nul 
         del /Q !lockFile! )
+        if not exist "output" (mkdir "output")
         del /Q .\program\frame*.png
-        del /Q GIF_generatoring_DONT-DEL.mp4 & rem 刪除原始影片檔
-        rem 檢測mp4 count 是否剩下 '1' 部影片，如果是 關掉 Multigenfuncation_start=false
+        rem Ū����l�Ω�!lastfailname!
+        set /p "templastgen=" < .\program\lastfailname.txt
+        set "templastgen=!templastgen:~0,-1!" & rem !variable:~start,length!
+        echo Ū������l��:�@"!templastgen!" > nul
+        echo �R���r�ꪺ�̫�@�Ӧr��:�@"!templastgen!" > nul
+        rem ���ʤ��� output ��Ƨ�
+        move "GIF_generatoring_DONT-DEL.mp4" "output\"
+        move "finalgif_DONT-DEL.gif" "output\"
+        rem �i�J output ��Ƨ�
+        cd "output"
+        rem ���R�W���
+        ren "GIF_generatoring_DONT-DEL.mp4" "!originalFilename[%userChoice%]!.mp4"
+        ren "finalgif_DONT-DEL.gif" "!originalFilename[%userChoice%]!.gif"
+        cd ..
+
+        rem �˴�mp4 count �O�_�ѤU '1' ���v���A�p�G�O ���� Multigenfuncation_start=false
         echo mp4Count: !mp4Count! > nul
         if !mp4Count! == 1 ( 
             ping 127.0.0.1 -n 1 -w 100 > nul
             set "Multigenfuncation_start=false"
             )
-        rem final 改名,final rename process
-        ren "finalgif_DONT-DEL.gif" "!originalFilename[%userChoice%]!.gif"
-cls
-echo ────────────────────────────────────────────────────────
-echo 正在等待暫存文件清除執行中... 
-echo ────────────────────────────────────────────────────────
-echo "成功生成" 檔案名稱為: "!originalFilename[%userChoice%]!.gif"
-echo ────────────────────────────────────────────────────────────────────────────
-echo 重新執行中...
-rem false=goto Multigenerator迴圈
+
+echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+echo Waiting for temporary file cleanup to execute...
+echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+echo "Successfully generated" file name: "!originalFilename[%userChoice%]!.gif"
+echo �w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w�w
+echo Re-executing...
+rem false=goto Multigenerator�j��
 if !Multigenfuncation_start! == true ( 
         goto :Multigenfuncation 
         )
